@@ -25,11 +25,11 @@ const LatestCommit = () => {
         <div>
             {commit ? (
                 <div>
-                    <h2>My Latest Commit</h2>
+                    <h2>My Latest Git Commit</h2>
                     <p><strong>Message:</strong> {commit.commit.message}</p>
                     <p><strong>Author:</strong> {commit.commit.author.name}</p>
                     <p><strong>Date:</strong> {new Date(commit.commit.author.date).toLocaleString()}</p>
-                    <p><strong>URL:</strong> <a href={commit.html_url} target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+                    {/* <p><strong>URL:</strong> <a href={commit.html_url} target="_blank" rel="noopener noreferrer">View on GitHub</a></p> */}
                 </div>
             ) : (
                 <p>Loading latest commit...</p>

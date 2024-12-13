@@ -19,19 +19,16 @@ const Weather: React.FC = () => {
 
     useEffect(() => {
         const fetchWeather = async (latitude: number, longitude: number) => {
-            console.log("Fetching weather for coordinates:", latitude, longitude);
             try {
                 const response = await fetch(
                     `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}`
                 );
-                console.log("API Response:", response);
 
                 if (!response.ok) {
                     throw new Error("Failed to fetch weather data");
                 }
 
                 const data = await response.json();
-                console.log("Weather Data:", data);
                 setWeatherData(data);
             } catch (error) {
                 console.error("Error fetching weather data:", error);
@@ -43,17 +40,12 @@ const Weather: React.FC = () => {
 
 
         const getLocation = () => {
-            console.log("getLocation function called");
 
             if (navigator.geolocation) {
-                console.log("Geolocation is supported by this browser.");
 
                 navigator.geolocation.getCurrentPosition(
                     (position) => {
                         const { latitude, longitude } = position.coords;
-                        console.log("Geolocation success:");
-                        console.log("Latitude:", latitude);
-                        console.log("Longitude:", longitude);
 
                         fetchWeather(latitude, longitude);  // Assuming fetchWeather is already defined and working
                     },
@@ -64,7 +56,6 @@ const Weather: React.FC = () => {
                     }
                 );
             } else {
-                console.error("Geolocation is not supported by this browser.");
                 setError("Geolocation is not supported by this browser.");
                 setLoading(false);
             }

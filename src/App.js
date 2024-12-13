@@ -100,7 +100,7 @@ function App() {
               {/* <h1 class="home__title">I'm Dom Nguyen</h1> */}
               <p class="home__desc">Based in Orange County, California</p>
               <Weather />
-              <a href="mailto:contact@domnguyen.me?subject=I%20See%20Great%20Potential%20Here%20%E2%80%93%20Care%20to%20Chat%3F" class="home__button">Hire Me</a>
+              <a href="mailto:domnguyen@gmail.com?subject=I%20See%20Great%20Potential%20Here%20%E2%80%93%20Care%20to%20Chat%3F" class="home__button">Hire Me</a>
               {/* <button onClick={openChat}>Chat with Us</button> */}
               <div class="home__arrow--click">
                 <a href="#about"><i class="fa-solid fa-chevron-down"></i></a>
@@ -135,7 +135,7 @@ function App() {
                 <li class="aboutTable__list"><b>Name:</b> Dom Nguyen</li>
                 <li class="aboutTable__list">
                   <b>Email:</b>
-                  <span class="aboutTable__list--active"> hello@domnguyen.me</span>
+                  <span class="aboutTable__list--active"> Domnguyen@gmail.com</span>
                 </li>
                 <li class="aboutTable__list">
                   <b>From:</b> Orange County, California
@@ -153,7 +153,7 @@ function App() {
               <p class="aboutData__desc">Happy Clients</p>
             </div>
             <div class="number__data">
-              <h4 class="aboutData__number">20+</h4>
+              <h4 class="aboutData__number">10+</h4>
               <p class="aboutData__desc">Projects Done</p>
             </div>
             <div class="number__data">
@@ -382,12 +382,6 @@ function App() {
               </div>
             </div>
           </div> */}
-
-          <div class="button__container">
-            <a class="summary__button" href="./Assets/Cv.pdf" target="_blank"
-            >Download Resume<i class="fa-sharp fa-solid fa-download"></i
-            ></a>
-          </div>
         </div>
       </section >
       <section>
